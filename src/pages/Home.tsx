@@ -1,5 +1,6 @@
 import React, { useState, useEffect}from "react";
 import { fetchStocks } from "../api";
+import { SearchBar } from "../components/AutoComplete";
 
 export const Home = () => {
     const [isLoading, setLoading] = useState<boolean>(true);
@@ -21,10 +22,9 @@ export const Home = () => {
         return <div className="App">Loading...</div>
     }
 
-    console.log(data[0])
     return(
         <div>
-            {data.length}
+            <SearchBar data={data} />
         </div>
     );
 }
