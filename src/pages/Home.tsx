@@ -1,30 +1,27 @@
-import React, { useState, useEffect}from "react";
-import { fetchStocks } from "../api";
-import { SearchBar } from "../components/AutoComplete";
+import React, { useEffect}from "react";
+
+import { useAppSelector, useAppDispatch } from '../redux/app/hooks';
+import { fetchDataAsync, selectStatus, selectStock } from '../redux/features/data/dataSlice';
+
+import { AutoComplete } from "../components/AutoComplete/index";
 
 export const Home = () => {
-    const [isLoading, setLoading] = useState<boolean>(true);
-    const [data, setData] = useState<any>();
+    const status = useAppSelector(selectStatus);
+    //const selected = useAppSelector(selectStock);
+
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
-        async function fetchStockData() {
-            //add redux in future to check if state already has data so we don't always  
-            //execute this api call everytime we go back to the home page
-            fetchStocks().then((results) => {
-                setData(results);
-                setLoading(false);
-            });  
-        }
-        fetchStockData();
-    }, []);
+        dispatch(fetchDataAsync())
+    }, [dispatch]);
 
-    if (isLoading){
+    if (status === "loading"){
         return <div className="App">Loading...</div>
     }
 
     return(
         <div>
-            <SearchBar data={data} />
+            <AutoComplete />
         </div>
     );
 }
