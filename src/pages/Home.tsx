@@ -1,13 +1,13 @@
 import React, { useEffect}from "react";
 
 import { useAppSelector, useAppDispatch } from '../redux/app/hooks';
-import { fetchDataAsync, selectStatus, selectStock } from '../redux/features/data/dataSlice';
+import { fetchDataAsync, selectStatus } from '../redux/features/data/dataSlice';
 
 import { AutoComplete } from "../components/AutoComplete/index";
+import { StockChart } from "../components/Chart/index";
 
 export const Home = () => {
     const status = useAppSelector(selectStatus);
-    //const selected = useAppSelector(selectStock);
 
     const dispatch = useAppDispatch();
 
@@ -22,6 +22,7 @@ export const Home = () => {
     return(
         <div>
             <AutoComplete />
+            <StockChart />
         </div>
     );
 }
