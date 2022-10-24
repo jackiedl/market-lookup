@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { useAppSelector, useAppDispatch } from '../../redux/app/hooks';
 import { selectData } from '../../redux/features/data/dataSlice';
-import { select } from '../../redux/features/stock/stockSlice';
+import { select, fetchTimeSeriesAsync } from '../../redux/features/stock/stockSlice';
 
 export const AutoComplete: React.FC = () => {
     const data = useAppSelector(selectData);
@@ -27,6 +27,8 @@ export const AutoComplete: React.FC = () => {
         setText(value.name);
         setSuggestion([]);
         dispatch(select(value));
+        const param = { symbol: value.symbol, interval: 5, output: 100}
+        dispatch(fetchTimeSeriesAsync(param));
     }
 
     const renderSuggestion = () => {

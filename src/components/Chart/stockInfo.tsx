@@ -1,6 +1,6 @@
 import React, {  } from "react";
 
-import { useAppSelector, useAppDispatch } from '../../redux/app/hooks';
+import { useAppSelector } from '../../redux/app/hooks';
 import { selectStock} from "../../redux/features/stock/stockSlice";
 
 const StockInfo: React.FC = () => {
