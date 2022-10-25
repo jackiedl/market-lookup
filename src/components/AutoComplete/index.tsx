@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 import { useAppSelector, useAppDispatch } from '../../redux/app/hooks';
-import { select, selectData } from '../../redux/features/data/dataSlice';
+import { selectData } from '../../redux/features/data/dataSlice';
+import { select, fetchTimeSeriesAsync } from '../../redux/features/stock/stockSlice';
 
 export const AutoComplete: React.FC = () => {
     const data = useAppSelector(selectData);
@@ -14,7 +15,8 @@ export const AutoComplete: React.FC = () => {
         const value = e.target.value;
         let  suggestion = [{}];
         if (value.length > 0){
-            const regex = new RegExp(`^${value}`, "i")
+            const val = value.replace(/[\][)(\\]/g, "");
+            const regex = new RegExp(`^${val}`, "i")
             suggestion = data.filter( v => regex.test(v.name));
         }
         setSuggestion(suggestion);
@@ -24,7 +26,9 @@ export const AutoComplete: React.FC = () => {
     const suggestionSelected = (value: any) => {
         setText(value.name);
         setSuggestion([]);
-        dispatch(select(value))
+        dispatch(select(value));
+        const param = { symbol: value.symbol, interval: 5, output: 100}
+        dispatch(fetchTimeSeriesAsync(param));
     }
 
     const renderSuggestion = () => {
