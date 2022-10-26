@@ -39,7 +39,6 @@ export type TimeSeries = {
 }
 //fetch list of stocks
 export const fetchData = () => STOCK_API.get(`/stocks`);
-//Supports: 1min, 5min, 15min, 30min, 45min, 1h, 2h, 4h, 1day, 1week, 1month
-//Supports output values in the range from 1 to 5000
-export const fetchTimeSeries = (symbol: string, interval:number, output:number) => 
-    STOCK_API.get(`/time_series?symbol=${symbol}&interval=${interval}min&outputsize=${output}&apikey=${API_KEY}`);
+//Supports: 1min, 30min, 1day, 1week
+export const fetchTimeSeries = (symbol: string, interval: string, output: string) => 
+    STOCK_API.get(`/time_series?symbol=${symbol}&interval=${interval}&outputsize=${output}&apikey=${API_KEY}`);
