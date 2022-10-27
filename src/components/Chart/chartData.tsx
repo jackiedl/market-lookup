@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { } from "react";
 import { Chart } from "react-google-charts";
 
+import ChartOptions from "./chartOptions";
 import { useAppSelector } from '../../redux/app/hooks';
 import { chartstatus, showchart } from "../../redux/features/chart/chartSlice";
 
@@ -10,6 +11,7 @@ const ChartData: React.FC = () => {
     const chart = useAppSelector(showchart);
     const status = useAppSelector(chartstatus);
 
+    //create options for each timeseries response
     const options = {
         legend: "none",
         bar: { groupWidth: "100%"},
@@ -22,13 +24,13 @@ const ChartData: React.FC = () => {
         },
     }
 
-
     if (status === "loading"){
         return <div>loading</div>
     }
 
     return(
         <div>
+            <ChartOptions />
              <Chart
                 chartType="CandlestickChart"
                 width="100%"
