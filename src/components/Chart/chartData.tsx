@@ -15,9 +15,9 @@ const ChartData: React.FC = () => {
     const options = {
         legend: "none",
         bar: { groupWidth: "100%"},
-        hAxis: {
-            showTextEvery: 10,
-        },
+        // hAxis: {
+        //     showTextEvery: 10,
+        // },
         candlestick: {
             fallingColor: { strokeWidth: 0, fill: "#a52714" }, // red
             risingColor: { strokeWidth: 0, fill: "#0f9d58" }, // green
@@ -32,10 +32,10 @@ const ChartData: React.FC = () => {
         <div>
             <ChartOptions />
              <Chart
-                chartType="CandlestickChart"
+                chartType="LineChart"
                 width="100%"
                 height="400px"
-                data={convertFetchData(chart?.values)}
+                data={convertFetchData(chart?.values, chart?.meta)}
                 options={options}
             />
         </div>

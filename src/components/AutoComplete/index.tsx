@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../styles/components/AutoComplete/autocomplete.css';
 
 import { useAppSelector, useAppDispatch } from '../../redux/app/hooks';
 import { selectData } from '../../redux/features/data/dataSlice';
@@ -37,14 +38,14 @@ export const AutoComplete: React.FC = () => {
             return null;
         }
         return (
-            <ul id="results">
-                {suggestions.slice(0, 10).map((item: any, i: any) => <li onClick={() => suggestionSelected(item)}  key={i + item.symbol}>{item.name}</li>)}
+            <ul id="search-results">
+                {suggestions.slice(0, 10).map((item: any, i: any) => <li className="search-result" onClick={() => suggestionSelected(item)}  key={i + item.symbol}>{item.name}</li>)}
             </ul>
         )
     }
 
     return(
-        <div>
+        <div id="input-wrapper">
             <input value={text} onChange={handleOnChange} type="text" id="autocomplete" placeholder="Stock Name lookup" autoComplete="off"></input>
             {renderSuggestion()}
         </div>

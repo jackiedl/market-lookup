@@ -11,7 +11,7 @@ const ChartOptions: React.FC = () => {
     const select1D = () => {
         dispatch(selecttimeseries(0));
     }
-    const select5D = () => {
+    const select1W = () => {
         dispatch(selecttimeseries(1));
     }
     const select1M = () => {
@@ -27,8 +27,8 @@ const ChartOptions: React.FC = () => {
             <div onClick={select1D}>
                 <div>1D</div>
             </div>
-            <div onClick={select5D}>
-                <div>5D</div>
+            <div onClick={select1W}>
+                <div>1W</div>
             </div>
             <div onClick={select1M}>
                 <div>1M</div>

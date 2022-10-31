@@ -18,12 +18,12 @@ export const fetchTimeSeriesAsync = createAsyncThunk(
     'chart/fetchTimeSeries',
     async (param: any) => {
         const {symbol} = param;
-        const response1D = fetchTimeSeries(symbol, "5min", "78");
-        const response5D = fetchTimeSeries(symbol, "30min", "78");
-        const response1M = fetchTimeSeries(symbol, "1day", "30");
-        const response1Y = fetchTimeSeries(symbol, "1day", "365");
+        const response1D = fetchTimeSeries(symbol, "5min", "96");
+        const response1W = fetchTimeSeries(symbol, "30min", "80");
+        const response1M = fetchTimeSeries(symbol, "1day", "23");
+        const response1Y = fetchTimeSeries(symbol, "1day", "252");
         
-        let [TS1D, TS5D, TS1M, TS1Y] = await Promise.all([response1D, response5D, response1M, response1Y]);
+        let [TS1D, TS5D, TS1M, TS1Y] = await Promise.all([response1D, response1W, response1M, response1Y]);
         return [TS1D.data, TS5D.data, TS1M.data, TS1Y.data]
     }
 )

@@ -18,9 +18,8 @@ export const Home = () => {
     if (status === "loading"){
         return <div className="App">Loading...</div>
     }
-
     return(
-        <div>
+        <div id="home-page">
             <AutoComplete />
             <StockChart />
         </div>
