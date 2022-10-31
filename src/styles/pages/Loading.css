@@ -1,0 +1,56 @@
+.loader {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 width: 100vw;
+	 height: 100vh;
+	 overflow: hidden;
+	 background-color: #fff;
+}
+
+ .loader-bar {
+	 width: 15rem;
+	 height: 0.125rem;
+	 display: block;
+	 margin: 28px auto;
+	 border-radius: 2px;
+	 background-color: #cfcfcf;
+	 position: relative;
+	 overflow: hidden;
+	 z-index: 1;
+}
+ .loader-bar:before {
+	 content: "";
+	 height: 3px;
+	 width: 68px;
+	 position: absolute;
+	 transform: translate(-34px, 0);
+	 background-color: #0aadc2;
+	 border-radius: 2px;
+	 animation: animationLoading 1.4s infinite ease;
+}
+ @keyframes animationLoading {
+	 0% {
+		 left: 0;
+	}
+	 50% {
+		 left: 100%;
+	}
+	 100% {
+		 left: 0;
+	}
+}
+ @keyframes bounce {
+	 0% {
+		 transform: scale(1);
+		 filter: blur(0);
+	}
+	 50% {
+		 transform: scale(0.9);
+		 filter: blur(1.4);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
