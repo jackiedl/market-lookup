@@ -7,6 +7,8 @@ import { Loading } from "./Loading";
 import { AutoComplete } from "../components/AutoComplete/index";
 import { StockChart } from "../components/Chart/index";
 
+import "../styles/pages/Home.css";
+
 export const Home = () => {
     const status = useAppSelector(selectStatus);
 
@@ -21,6 +23,7 @@ export const Home = () => {
     }
     return(
         <div id="home-page">
+            <header><h1>MARKET LOOKUP</h1></header>
             <AutoComplete />
             <StockChart />
         </div>

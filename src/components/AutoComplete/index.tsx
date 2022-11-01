@@ -39,16 +39,22 @@ export const AutoComplete: React.FC = () => {
         }
         return (
             <ul id="search-results">
-                {suggestions.slice(0, 10).map((item: any, i: any) => <li className="search-result" onClick={() => suggestionSelected(item)}  key={i + item.symbol}>{item.name}</li>)}
+                {suggestions.slice(0, 10).map((item: any, i: any) => <li className="search-item" onClick={() => suggestionSelected(item)}  key={i + item.symbol}>{item.name}</li>)}
             </ul>
         )
     }
 
     return(
-        <div id="input-wrapper">
-            <input value={text} onChange={handleOnChange} type="text" id="autocomplete" placeholder="Stock Name lookup" autoComplete="off"></input>
-            {renderSuggestion()}
+        <div id="search-wrapper">
+            <div id="search-bar">
+                <input value={text} onChange={handleOnChange} type="text" id="search-autocomplete" autoComplete="off"></input>
+                <div id="result-wrapper">
+                    {renderSuggestion()}
+                </div>
+            
+            </div>
         </div>
+        
     )
 
 }
