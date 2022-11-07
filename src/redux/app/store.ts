@@ -2,12 +2,14 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import dataReducer from '../features/data/dataSlice';
 import stockReducer from '../features/stock/stockSlice';
 import chartReducer from "../features/chart/chartSlice";
+import resultReducer from "../features/search/searchSlice";
 
 export const store = configureStore({
     reducer: {
         data: dataReducer,
         stock: stockReducer,
         chart: chartReducer,
+        result: resultReducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         immutableCheck: { warnAfter: 128 },

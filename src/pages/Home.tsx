@@ -5,7 +5,9 @@ import { fetchDataAsync, selectStatus } from '../redux/features/data/dataSlice';
 
 import { Loading } from "./Loading";
 import { AutoComplete } from "../components/AutoComplete/index";
+import { AutoCompleteResults } from "../components/AutoComplete/results";
 import { StockChart } from "../components/Chart/index";
+
 
 import "../styles/pages/Home.css";
 
@@ -26,6 +28,7 @@ export const Home = () => {
             <header><h1>MARKET LOOKUP</h1></header>
             <AutoComplete />
             <StockChart />
+            <AutoCompleteResults />
         </div>
     );
 }

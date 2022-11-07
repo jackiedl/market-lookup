@@ -15,7 +15,7 @@ export const StockChart: React.FC = () => {
     }
 
     return(
-        <div>
+        <div id="stock-info-wrapper">
             <StockInfo />
             <ChartData />
         </div>
