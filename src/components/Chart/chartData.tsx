@@ -29,11 +29,11 @@ const ChartData: React.FC = () => {
     }
 
     return(
-        <div>
+        <div id="stock-chart-container">
             <ChartOptions />
              <Chart
                 chartType="LineChart"
-                width="100%"
+                width="800px"
                 height="400px"
                 data={convertFetchData(chart?.values, chart?.meta)}
                 options={options}

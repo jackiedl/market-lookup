@@ -1,5 +1,7 @@
 import React, {  } from "react";
 
+import "../../styles/components/Chart/chart.css";
+
 import { useAppSelector } from '../../redux/app/hooks';
 import { stockStatus} from "../../redux/features/stock/stockSlice";
 
@@ -15,7 +17,7 @@ export const StockChart: React.FC = () => {
     }
 
     return(
-        <div id="stock-info-wrapper">
+        <div id="info-container">
             <StockInfo />
             <ChartData />
         </div>

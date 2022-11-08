@@ -1,0 +1,32 @@
+#results-wrapper{
+    position: absolute;
+    width: 100%;
+    max-width: 40rem;
+    top: 177px;
+    background: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+#results-ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 18px 0 8px;
+}
+
+.results-li{
+    text-align: left;
+    padding: 0px 24px 0px 24px;
+    font-size: 1.2rem;
+    color: #222;
+    line-height: 32px;
+}
+
+.results-li:hover{
+    background: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}

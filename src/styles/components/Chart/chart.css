@@ -1,0 +1,39 @@
+#info-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+#stock-info-container{
+    flex: 1;
+
+}
+
+#stock-chart-container{
+    flex: 1;
+    flex-direction: row;
+}
+
+#chart-menu-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 70px;
+}
+
+.chart-menu-wrapper{
+    padding: 0px 10px;
+}
+
+.chart-menu-border {
+    border-left: 1px solid #dadce0;
+}
+
+.chart-menu-item{
+    font-size: 14px;
+    line-height: 1.58;
+    padding: 0 16px;
+}
+
+.chart-menu-item:hover{
+    cursor: pointer;
+}

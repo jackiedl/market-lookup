@@ -7,7 +7,7 @@ const StockInfo: React.FC = () => {
     const stock = useAppSelector(selectStock);
 
     return (
-        <div>
+        <div id="stock-info-container">
             <p>Name: {stock?.name}</p>
             <p>Symbol: {stock?.symbol}</p>
             <p>Exchange: {stock?.exchange}</p>

@@ -23,18 +23,18 @@ const ChartOptions: React.FC = () => {
 
 
     return(
-        <div>
-            <div onClick={select1D}>
-                <div>1D</div>
+        <div id="chart-menu-container">
+            <div className="chart-menu-wrapper" onClick={select1D}>
+                <div className="chart-menu-item">D</div>
             </div>
-            <div onClick={select1W}>
-                <div>1W</div>
+            <div className="chart-menu-wrapper chart-menu-border" onClick={select1W}>
+                <div className="chart-menu-item">W</div>
             </div>
-            <div onClick={select1M}>
-                <div>1M</div>
+            <div className="chart-menu-wrapper chart-menu-border" onClick={select1M}>
+                <div className="chart-menu-item">M</div>
             </div>
-            <div onClick={select1Y}>
-                <div>1Y</div>
+            <div className="chart-menu-wrapper chart-menu-border" onClick={select1Y}>
+                <div className="chart-menu-item" >Y</div>
             </div>
         </div>
     )
