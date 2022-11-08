@@ -11,6 +11,8 @@ import { StockChart } from "../components/Chart/index";
 
 import "../styles/pages/Home.css";
 
+import Logo from "../assets/logo.png";
+
 export const Home = () => {
     const status = useAppSelector(selectStatus);
 
@@ -25,7 +27,14 @@ export const Home = () => {
     }
     return(
         <div id="home-page">
-            <header><h1>MARKET LOOKUP</h1></header>
+            <div id="home-page-logo">
+            <img
+                src={Logo}
+                alt="logo"
+                className="logo"
+                aspect-ratio=".5"
+            />
+            </div>
             <AutoComplete />
             <StockChart />
             <AutoCompleteResults />

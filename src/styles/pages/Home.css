@@ -6,3 +6,13 @@
     width: 100vw;
     overflow: hidden;
 }
+
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: scale-down;
+    object-position: center bottom;
+    width: auto;
+    height: 192px;
+    aspect-ratio: auto 272 / 92;
+}
