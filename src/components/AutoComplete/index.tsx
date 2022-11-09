@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import '../../styles/components/AutoComplete/autocomplete.css';
 
 import { useAppSelector, useAppDispatch } from '../../redux/app/hooks';

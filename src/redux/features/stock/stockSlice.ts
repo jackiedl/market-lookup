@@ -4,11 +4,13 @@ import { StockData } from '../../../api';
 
 export interface StockState {
     stock: StockData | null,
+    logo: any,
     status: 'unselected' | 'selected' | 'loading' | 'failed';
 }
 
 const initialState: StockState = {
     stock: null,
+    logo: {},
     status: 'unselected',
 };
 

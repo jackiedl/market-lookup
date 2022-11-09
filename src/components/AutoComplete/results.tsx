@@ -3,7 +3,6 @@ import React from "react";
 import '../../styles/components/AutoComplete/results.css';
 
 import { useAppSelector, useAppDispatch } from '../../redux/app/hooks';
-import { fetchTimeSeriesAsync } from '../../redux/features/chart/chartSlice';
 import { select } from '../../redux/features/stock/stockSlice';
 import { textData, handleOnChange } from '../../redux/features/data/dataSlice';
 import { searchResult } from '../../redux/features/search/searchSlice';
@@ -18,9 +17,6 @@ export const AutoCompleteResults : React.FC = () => {
     const suggestionSelected = (value: any) => {
         dispatch(handleOnChange(""));
         dispatch(select(value));
-        const param = { symbol: value.symbol}
-        dispatch(fetchTimeSeriesAsync(param))
-        
     }
 
     const renderResults  = () => {

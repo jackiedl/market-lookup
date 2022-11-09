@@ -6,7 +6,7 @@ import { fetchDataAsync, selectStatus } from '../redux/features/data/dataSlice';
 import { Loading } from "./Loading";
 import { AutoComplete } from "../components/AutoComplete/index";
 import { AutoCompleteResults } from "../components/AutoComplete/results";
-import { StockChart } from "../components/Chart/index";
+import { StockChart } from "../components/Stock/index";
 
 
 import "../styles/pages/Home.css";
