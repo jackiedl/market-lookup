@@ -1,4 +1,17 @@
 #info-container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
+
+#info-symbol-wrapper{
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+#info-chart-wrapper{
+    grid-area: 2 / 1 / 4 / 4; 
+}
+

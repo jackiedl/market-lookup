@@ -13,7 +13,7 @@ const ChartData: React.FC = () => {
             theme="dark" 
             symbol={stock?.symbol} 
             allow_symbol_change={false} 
-            height="500px" />
+            autosize/>
 
     );
 }
