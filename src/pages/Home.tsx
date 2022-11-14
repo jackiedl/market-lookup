@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from '../redux/app/hooks';
 import { fetchDataAsync, selectStatus } from '../redux/features/data/dataSlice';
 
 import { Loading } from "./Loading";
+import { Navbar } from "../components/Navbar";
 import { AutoComplete } from "../components/AutoComplete/index";
 import { AutoCompleteResults } from "../components/AutoComplete/results";
 import { StockChart } from "../components/Stock/index";
@@ -25,14 +26,15 @@ export const Home = () => {
     if (status === "loading"){
         return <Loading />
     }
+    
     return(
         <div id="home-page">
+            <Navbar />
             <div id="home-page-logo">
             <img
                 src={Logo}
                 alt="logo"
                 className="logo"
-                aspect-ratio=".5"
             />
             </div>
             <AutoComplete />

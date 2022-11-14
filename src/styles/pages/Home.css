@@ -12,7 +12,44 @@
     max-width: 100%;
     object-fit: scale-down;
     object-position: center bottom;
-    width: auto;
-    height: 192px;
-    aspect-ratio: auto 272 / 92;
+    width: auto;    
+}
+
+#nav-container {
+    width: 100%;
+    margin: 1.5rem;
+}
+
+#nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+#nav-logo {
+    position: relative;
+}
+
+#nav-logo > .logo {
+    object-fit: fill;
+    padding-left: 150px;
+    max-width: unset;
+}
+
+#nav-content {
+    flex: 1;
+}
+#nav-content > #search-wrapper{
+    padding-left: 30px;
+    margin: 0;
+}
+
+.hide-nav {
+    display: none;
+}
+
+.show-nav {
+    display: unset;
 }

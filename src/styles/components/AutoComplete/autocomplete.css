@@ -10,6 +10,14 @@
     align-items: center;
 }
 
+#search-bar:hover {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223,225,229,0);
+    border-radius: 1.625rem;
+}
+
 #search-autocomplete {
     width: 100%;
     height: 2.8rem;
@@ -22,7 +30,3 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 
-#autocomplete:focus{
-    border: 1.1px solid #1c62b9;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,.4);
-}
