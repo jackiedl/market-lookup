@@ -5,18 +5,16 @@ import { fetchDataAsync, selectStatus } from '../redux/features/data/dataSlice';
 
 import { Loading } from "./Loading";
 import { Navbar } from "../components/Navbar";
-import { AutoComplete } from "../components/AutoComplete/index";
+import { MainSearch } from "../components/MainSearch";
 import { AutoCompleteResults } from "../components/AutoComplete/results";
 import { StockChart } from "../components/Stock/index";
 
 
 import "../styles/pages/Home.css";
 
-import Logo from "../assets/logo.png";
 
 export const Home = () => {
     const status = useAppSelector(selectStatus);
-
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -30,14 +28,7 @@ export const Home = () => {
     return(
         <div id="home-page">
             <Navbar />
-            <div id="home-page-logo">
-            <img
-                src={Logo}
-                alt="logo"
-                className="logo"
-            />
-            </div>
-            <AutoComplete />
+            <MainSearch />
             <StockChart />
             <AutoCompleteResults />
         </div>

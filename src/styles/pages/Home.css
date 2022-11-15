@@ -7,6 +7,16 @@
     overflow: hidden;
 }
 
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+    width: inherit;
+}
+
 .logo {
     max-height: 100%;
     max-width: 100%;
@@ -46,10 +56,6 @@
     margin: 0;
 }
 
-.hide-nav {
+.hidden {
     display: none;
-}
-
-.show-nav {
-    display: unset;
 }
