@@ -44,7 +44,7 @@
 
 #nav-logo > .logo {
     object-fit: fill;
-    padding-left: 150px;
+    margin-left: 150px;
     max-width: unset;
 }
 
@@ -52,10 +52,26 @@
     flex: 1;
 }
 #nav-content > #search-wrapper{
-    padding-left: 30px;
-    margin: 0;
+    margin-left: 30px;
 }
+
+#search-wrapper > #results-wrapper {
+    position: absolute;
+    z-index: 100;
+}
+
 
 .hidden {
     display: none;
 }
+
+.copyright {
+    color: #030303;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .copyright > a {
+    color: #030303;
+  }

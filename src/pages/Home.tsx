@@ -6,7 +6,6 @@ import { fetchDataAsync, selectStatus } from '../redux/features/data/dataSlice';
 import { Loading } from "./Loading";
 import { Navbar } from "../components/Navbar";
 import { MainSearch } from "../components/MainSearch";
-import { AutoCompleteResults } from "../components/AutoComplete/results";
 import { StockChart } from "../components/Stock/index";
 
 
@@ -27,10 +26,9 @@ export const Home = () => {
     
     return(
         <div id="home-page">
-            <Navbar />
+            <Navbar/>
             <MainSearch />
-            <StockChart />
-            <AutoCompleteResults />
+            <StockChart />    
         </div>
     );
 }

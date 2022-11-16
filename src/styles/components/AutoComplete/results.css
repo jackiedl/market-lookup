@@ -1,8 +1,7 @@
 #results-wrapper{
-    position: absolute;
+    position: relative;
     width: 100%;
     max-width: 40rem;
-    top: 250px;
     background: #ffffff;
     outline: none;
     border: none;

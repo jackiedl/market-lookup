@@ -1,11 +1,18 @@
 import React from 'react';
 
 import { Home } from "./pages/Home";
+import { Footer } from "./components/Footer/index";
+
+import "./styles/pages/Home.css";
 
 function App() {
 
   return (
-       <Home/>
+      <div>
+        <Home/>
+        <Footer />
+      </div>
+       
   );
 }
 

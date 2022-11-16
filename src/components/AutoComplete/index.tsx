@@ -1,6 +1,8 @@
 import React from "react";
 import '../../styles/components/AutoComplete/autocomplete.css';
 
+import { AutoCompleteResults } from "./results";
+
 import { useAppSelector, useAppDispatch } from '../../redux/app/hooks';
 import { selectData, textData, handleOnChange } from '../../redux/features/data/dataSlice';
 import { search } from '../../redux/features/search/searchSlice';
@@ -28,6 +30,7 @@ export const AutoComplete: React.FC = () => {
             <div id="search-bar">
                 <input value={text} onChange={OnChange} type="text" id="search-autocomplete" autoComplete="off"></input>
             </div>
+            <AutoCompleteResults />
         </div>
         
     )
