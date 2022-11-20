@@ -19,6 +19,7 @@
 }
 
 #search-autocomplete {
+    -webkit-appearance: none;
     width: 100%;
     height: 2.8rem;
     background: #ffffff;
